@@ -7,10 +7,32 @@ The LINE Bot to find Cinema information.
 
 * Ruby 2.6+
 
-## Feature
+## Usage
+
+Run below command to start chatbot
+
+```bash
+# Fill your LINE Bot tokens
+export LINE_CHANNEL_ID=
+export LINE_CHANNEL_SECRET=
+export LINE_CHANNEL_TOKEN=
+# Start server
+rackup
+```
+
+### Ngrok
+
+You can user ngrok for development
+
+
+```bash
+ngrok http 9292
+```
+
+## Features
 
 * [ ] Persistent Movie Data
-* [ ] Daily Refresh Movies
+  * [ ] Daily Refresh Movies
 * [x] Load Movies from VSCiemas
 * [x] List Movies
 * [x] Sort Movies
