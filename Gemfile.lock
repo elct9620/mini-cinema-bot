@@ -1,0 +1,25 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    line-bot-api (1.17.0)
+    mini_portile2 (2.4.0)
+    nio4r (2.5.4)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
+    oj (3.10.17)
+    puma (5.1.1)
+      nio4r (~> 2.0)
+    rack (2.2.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  line-bot-api (~> 1.17)
+  nokogiri (~> 1.10)
+  oj (~> 3.10)
+  puma (~> 5.1)
+  rack (~> 2.2)
+
+BUNDLED WITH
+   2.1.4
