@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+command = ARGV.shift || 'server'
+
+def run_server
+  exec("bundle exec rackup -o 0.0.0.0 -p 3000")
+end
+
+case command
+when 'server'
+  if respond_to?("run_#{command}", true)
+    send("run_#{command}")
+    return
+  end
+
+  exec("bundle exec #{command} #{ARGV.join(' ')}")
+else
+  exec("#{command} #{ARGV.join(' ')}")
+end
