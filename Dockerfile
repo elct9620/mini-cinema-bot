@@ -28,8 +28,10 @@ RUN gem install bundler:2.1.4 \
     && bundle install -j "$(getconf _NPROCESSORS_ONLN)" \
     && find /${APP_HOME}/vendor/bundle -type f -name '*.c' -delete \
     && find /${APP_HOME}/vendor/bundle -type f -name '*.o' -delete \
+    && find /${APP_HOME}/vendor/bundle -type d -name 'ext' -exec rm -rf {} + \
     && find /usr/local/bundle -type f -name '*.c' -delete \
     && find /usr/local/bundle -type f -name '*.o' -delete \
+    && find /usr/local/bundle -type d -name 'ext' -exec rm -rf {} + \
     && rm -rf /usr/local/bundle/cache/*.gem
 
 # Server
