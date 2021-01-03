@@ -1,4 +1,4 @@
-ARG APP_HOME=/opt/unlight
+ARG APP_HOME=/opt/cinema-bot
 ARG RUBY_VERSION=2.7.2
 
 # Pre-compile Gems
