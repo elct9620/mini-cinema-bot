@@ -14,3 +14,7 @@ group :web do
   gem "puma", "~> 5.1"
   gem "rack", "~> 2.2"
 end
+
+group :development do
+  gem "rake"
+end

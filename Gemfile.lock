@@ -10,6 +10,7 @@ GEM
     puma (5.1.1)
       nio4r (~> 2.0)
     rack (2.2.3)
+    rake (13.0.2)
 
 PLATFORMS
   ruby
@@ -20,6 +21,7 @@ DEPENDENCIES
   oj (~> 3.10)
   puma (~> 5.1)
   rack (~> 2.2)
+  rake
 
 BUNDLED WITH
    2.1.4
