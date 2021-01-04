@@ -39,4 +39,8 @@ ngrok http 9292
 * [x] Random Movies
 * [ ] Movies Categories
 * [ ] Movies Timelines
-* [ ] Dockerize
+* [x] Dockerize
+
+## Play with LINE Bot
+
+![QR Code](https://qr-official.line.me/sid/L/945tanem.png)
