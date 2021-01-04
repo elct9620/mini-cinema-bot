@@ -43,4 +43,4 @@ ngrok http 9292
 
 ## Play with LINE Bot
 
-![QR Code](https://qr-official.line.me/sid/L/945tanem.png)
+![QR Code](https://github.com/elct9620/mini-cinema-bot/blob/master/.github/assets/qrcode.png)
