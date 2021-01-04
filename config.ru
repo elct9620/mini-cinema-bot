@@ -12,5 +12,10 @@ Oj.mimic_JSON
 
 movies = VSCinemas.movies.map(&:to_movie)
 
+app = lambda do |env|
+  request = Rack::Request.new(env)
+  Handler.new(request.body.read, movies).perform
+end
+
 use SignatureValidator
-run ->(env) { Handler.new(env, movies).perform }
+run app

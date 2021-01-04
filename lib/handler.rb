@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rack'
-
 require_relative './bot'
 require_relative './carousel'
 
@@ -12,34 +10,25 @@ class Handler
   BAD_REQUEST_RESPONSE = [400, SHARED_HEADER, ["Bad Request"]]
 
   # @since 0.1.0
-  attr_reader :env, :movies
+  attr_reader :body, :movies
 
   # @param [Hash] request environment
   #
   # @since 0.1.0
-  def initialize(env, movies)
-    @env = env
+  def initialize(body, movies)
+    @body = body
     @movies = movies
   end
 
-  # Request
+  # Data
   #
-  # @return [Rack::Request]
-  #
-  # @since 0.1.0
-  def request
-    @request ||= Rack::Request.new(env)
-  end
-
-  # Body
-  #
-  # @return [Hash] parsed request body
+  # Parsed Body
   #
   # @since 0.1.0
-  def body
-    @body ||= JSON.parse(request.body.read)
-  rescue JSON::ParserError
-    @body ||= {}
+  def data
+    @data ||= JSON.parse(body)
+  rescue JSON::ParserError, TypeError
+    @data ||= {}
   end
 
   # Messages
@@ -48,7 +37,7 @@ class Handler
   #
   # @since 0.1.0
   def messages
-    @events = body['events'].select { |event| event['type'] == 'message' }
+    @events = (data['events'] || []).select { |event| event['type'] == 'message' }
   end
 
   # Return Response
