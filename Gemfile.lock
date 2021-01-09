@@ -25,6 +25,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.0)
+    vcr (6.0.0)
 
 PLATFORMS
   ruby
@@ -37,6 +38,7 @@ DEPENDENCIES
   rack (~> 2.2)
   rake
   rspec
+  vcr
 
 BUNDLED WITH
    2.1.4
