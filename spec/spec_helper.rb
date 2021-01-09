@@ -14,8 +14,11 @@
 #
 require 'vcr'
 require 'webmock'
+require 'simplecov'
 
 Dir[Bundler.root.join('spec/support/**/*.rb')].sort.each { |support| require support }
+
+SimpleCov.start
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
