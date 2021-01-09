@@ -18,6 +18,8 @@ module VSCinemas
 
     # @since 0.1.0
     def each(&block)
+      return enum_for(:each) unless defined?(yield)
+
       doc.css('.movieList li').map { |el| MovieItem.new(el) }.each(&block)
       self.next.each(&block) if next? && continue?
     end
