@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    diff-lcs (1.4.4)
     line-bot-api (1.17.0)
     mini_portile2 (2.4.0)
     nio4r (2.5.4)
@@ -11,6 +12,19 @@ GEM
       nio4r (~> 2.0)
     rack (2.2.3)
     rake (13.0.2)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.0)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.0)
 
 PLATFORMS
   ruby
@@ -22,6 +36,7 @@ DEPENDENCIES
   puma (~> 5.1)
   rack (~> 2.2)
   rake
+  rspec
 
 BUNDLED WITH
    2.1.4

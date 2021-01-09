@@ -15,6 +15,10 @@ group :web do
   gem "rack", "~> 2.2"
 end
 
+group :development, :test do
+  gem "rspec"
+end
+
 group :development do
   gem "rake"
 end
