@@ -9,7 +9,7 @@ RUN apk --update \
         build-base=~0.5 \
         ca-certificates=~20191127 \
         zlib-dev=~1.2.11 \
-        libressl-dev=~3.1.2
+        libressl-dev=~3.1.5
 
 # Setup Application
 ARG APP_HOME
@@ -41,7 +41,7 @@ RUN apk --update \
         add --no-cache \
         ca-certificates=~20191127 \
         zlib=~1.2.11 \
-        libressl=~3.1.2
+        libressl=~3.1.5
 
 ARG APP_HOME
 ENV APP_HOME=${APP_HOME}
